@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TODO-APP</title>
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+	<h1 style="background-color:gray;margin-top:1px;"><%= title %></h1>
+	<%= new Date() %>
+	
+    <br><br>
+    <table class="table table-striped table-hovar table-responsive">
+    <thead>
+       <th>S#</th>
+       <th>todos</th>
+       <th>Created Date</th>
+       <th></th> 
+    </thead>
+    <tbody>
+        <% var count=1; for(var  i=0; i<items.length; i++) { %>
+            <tr>
+                <td><%= count %></td>
+                <td><%= items[i].todo %></td>
+                <td><%= items[i].createddate %></td>
+                <td><a href="/delete/<%= items[i].id %>" >Delete</a></td>
+            </tr>
+        <% count++; } %>
+        
+        <% if(items.length == 0){ %>
+        <tr><td>No todo found!</td><td></td></tr> 
+        <% } %> 
+    </tbody>
+	</table>
+    <br>
+	<form action="/add" method="post">
+		<input type="text" name="newItem" class="form-control" placeholder="Add new todo" required><br>
+		<input type="submit" class="btn btn-default">
+	</form>
+	</div>
+    
+    <script src="jquery/dist/jquery.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.js"></script>
+
+</body>
+</html>

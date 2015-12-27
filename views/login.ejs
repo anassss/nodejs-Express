@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TODO-APP</title>
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+	<h1  style="background-color:gray;margin-top:1px;"><%= title %></h1>
+	<%= new Date() %>
+	<br><br>
+	<form action="/login" method="post">
+		<input type="text" name="username" placeholder="username" class="form-control" required>
+        <br>
+        <input type="password" name="password" placeholder="password" class="form-control" required>
+        <br>
+        <div class="alert-danger"><%= error %></div>
+		<input type="submit" value="Login" class="btn btn-default">
+	</form>
+	</div>
+    
+    <script src="jquery/dist/jquery.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.js"></script>
+
+</body>
+</html>
