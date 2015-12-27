@@ -24,6 +24,8 @@ app.use(require('./controllers/todos'));
 
 //start server
 
-app.listen(1337,function(){
-	console.log('server start listing at port 1337');
+var port = process.env.PORT || 1337;
+
+app.listen(port,function(){
+	console.log('server start listing at port '+port);
 });

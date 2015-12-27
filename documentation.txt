@@ -1,0 +1,19 @@
+npm init
+npm install express
+npm install body-parser
+npm i -g bower
+bower i bootstrap
+npm install express-session
+
+
+===============git=======================
+git init
+git add app.js views controllers bower_components 
+git commit -m "first commit"
+git add package.json
+git commit -m "add package.json"
+git log
+git remote add origin https://github.com/anassss/nodejs-Express
+
+
+
